@@ -10,7 +10,7 @@ class Patients{
         void setHistory(string petHistoryDisease, string petHistoryMedicine, bool petNeut);
         void setVaccine(string petVaccine, string petVaccineDate);
         void setPetDetails(string petBreed, int petAge, double petWeight);
-        string getOwnerContact() const;
+        void getOwnerContact() const;
         void getPetDetails() const;
         void getPetHistory() const;
         void getOwnerDetails() const;
