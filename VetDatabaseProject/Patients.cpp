@@ -36,8 +36,11 @@ void Patients::getOwnerContact() const
 }
 void Patients::getPetDetails() const
 {
+<<<<<<< HEAD
     cout << "Pet name: " << petName << endl;
     cout << "Pet species: " << petSpecies << endl;
+=======
+>>>>>>> 3f63c2fc1f98561f47d685bded665b223793716c
     cout << "Pet breed: " << petBreed << endl;
     cout << "Pet age: " << petAge << endl;
     cout << "Pet weight: " << petWeight << endl;
