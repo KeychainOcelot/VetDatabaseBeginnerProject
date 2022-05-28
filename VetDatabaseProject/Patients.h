@@ -13,7 +13,6 @@ class Patients{
         void getOwnerContact() const;
         void getPetDetails() const;
         void getPetHistory() const;
-        void getOwnerDetails() const;
 
     private:
         string ownerName;

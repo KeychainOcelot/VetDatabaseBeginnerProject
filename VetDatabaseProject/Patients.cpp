@@ -1,5 +1,6 @@
 #include "Patients.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 Patients::Patients(string ownerName, string petName, string petSpecies)
@@ -17,8 +18,8 @@ void Patients::setHistory(string petHistoryDisease, string petHistoryMedicine, b
 }
 void Patients::setVaccine(string petVaccine, string petVaccineDate)
 {
-    this->petVaccine = petVaccine;
-    this->petVaccineDate = petVaccineDate;
+    this->petVaccine.push_back(petVaccine);
+    this->petVaccineDate.push_back(petVaccineDate);
 
 }
 void Patients::setPetDetails(string petBreed, int petAge, double petWeight)
@@ -35,13 +36,21 @@ void Patients::getOwnerContact() const
 }
 void Patients::getPetDetails() const
 {
+    cout << "Pet name: " << petName << endl;
+    cout << "Pet species: " << petSpecies << endl;
+    cout << "Pet breed: " << petBreed << endl;
+    cout << "Pet age: " << petAge << endl;
+    cout << "Pet weight: " << petWeight << endl;
 
 }
 void Patients::getPetHistory() const
 {
-
-}
-void Patients::getOwnerDetails() const
-{
+    cout << "Here are the vaccine details: " << endl;
+    for(int i = 0; i < petVaccine.size(); i++)
+    {
+        cout << petVaccine[i] << ":\t" << petVaccineDate[i] << endl;
+    }
+    cout << "\n\nPet neuter/spaying status: " << boolalpha << petNeut << endl;
+    cout<<"Here is the medical history of the pet: " << petHistoryDisease << "\t " << petHistoryMedicine << endl;
 
 }
